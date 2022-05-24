@@ -1,0 +1,248 @@
+
+1.Explain briefly what happens when you hit a url? explain DNS lookup
+
+it has the location of the resources which we want to access. It is an address of the place where we want to go to interact with or find information.
+DNS look-up:-After hitting the URL, the first thing that needs to happen is to resolve the IP address associated with the domain name. DNS helps in resolving this. DNS is like a phone book and helps us to provide the IP address that is associated with the domain name just like our phone book gives a mobile number which is associated with the person’s name.
+
+2.What is a URLs full form? Explain what a url is and the four parts it consists of The protocol in use The hostname of the server The location of the file The arguments to the file
+	
+A URL (Uniform Resource Locator) is a unique identifier used to locate a resource on the Internet. It is also referred to as a web address. URLs consist of multiple parts -- including a protocol and domain name -- that tell a web browser how and where to retrieve a resource.
+The protocol or scheme. Used to access a resource on the internet. Protocols include http, https,and file. The resource is reached through the domain name system (DNS) name. In this example, the protocol is https.
+Host name or domain name. The unique reference represents a webpage. For this example, whatis.techtarget.com.
+Port name. Usually not visible in URLs, but necessary. Always following a colon, port 80 is the default port for web servers, but there are other options. For example :port80.
+Path. A path refers to a file or location on the web server. For this example, search/query.
+Query. Found in the URL of dynamic pages. The query consists of a question mark, followed by parameters. For this example, ?.
+Parameters. Pieces of information in a query string of a URL. Multiple parameters can be separated by ampersands (&). For this example, q=URL.
+Fragment. This is an internal page reference, which refers to a section within the webpage. It appears at the end of a URL and begins with a hashtag (#). Although not in the example above, an example could be #history in the URL
+
+3.What is HTTP protocol?
+
+	HTTP is a protocol for fetching resources such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance, text, layout description, images, videos, scripts, and more.
+
+4.What is TCP Protocol?
+TCP stands for Transmission Control Protocol, a communications standard that enables application programs and computing devices to exchange messages over a network. It is designed to send packets across the internet and ensure the successful delivery of data and messages over networks.TCP is one of the basic standards that define the rules of the internet and is included within the standards defined by the Internet Engineering Task Force (IETF). It is one of the most commonly used protocols within digital network communications and ensures end-to-end data delivery.TCP organizes data so that it can be transmitted between a server and a client. It guarantees the integrity of the data being communicated over a network. Before it transmits data, TCP establishes a connection between a source and its destination, which it ensures remains live until communication begins. It then breaks large amounts of data into smaller packets, while ensuring data integrity is in place throughout the process.
+
+5.Explain all the different HTTP methods?
+	
+	HTTP defines a set of request methods to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as HTTP verbs. Each of them implements a different semantic, but some common features are shared by a group of them: e.g. a request method can be safe, idempotent, or cacheable.
+GET
+The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+HEAD
+The HEAD method asks for a response identical to a GET request, but without the response body.
+POST
+The POST method submits an entity to the specified resource, often causing a change in state or side effects on the server.
+PUT
+The PUT method replaces all current representations of the target resource with the request payload.
+DELETE
+The DELETE method deletes the specified resource.
+CONNECT
+The CONNECT method establishes a tunnel to the server identified by the target resource.
+OPTIONS
+The OPTIONS method describes the communication options for the target resource.
+TRACE
+The TRACE method performs a message loop-back test along the path to the target resource.
+PATCH
+The PATCH method applies partial modifications to a resource.
+
+
+
+6.What are HTTP headers?
+
+HTTP headers let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (:), then by its value. Whitespace before the value is ignored.
+Custom proprietary headers have historically been used with an X- prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in RFC 6648; others are listed in an IANA registry, whose original content was defined in RFC 4229. IANA also maintains a registry of proposed new HTTP headers.
+
+7.What are some HTTP response codes? What does it mean? 2xx, 3xx, 4xx, 5xx
+
+	This is a list of Hypertext Transfer Protocol (HTTP) response status codes. Status codes are issued by a server in response to a client's request made to the server. It includes codes from IETF Request for Comments (RFCs), other specifications, and some additional codes used in some common applications of the HTTP. The first digit of the status code specifies one of five standard classes of responses. The message phrases shown are typical, but any human-readable alternative may be provided. Unless otherwise stated, the status code is part of the HTTP/1.1 standard (RFC 7231).
+The Internet Assigned Numbers Authority (IANA) maintains the official registry of HTTP status codes.
+All HTTP response status codes are separated into five classes or categories. The first digit of the status code defines the class of response, while the last two digits do not have any classifying or categorization role. There are five classes defined by the standard:
+1xx informational response – the request was received, continuing process
+2xx successful – the request was successfully received, understood, and accepted
+3xx redirection – further action needs to be taken in order to complete the request
+4xx client error – the request contains bad syntax or cannot be fulfilled
+5xx server error – the server failed to fulfil an apparently valid request
+
+8.What does cache control on http response mean?
+
+	Cache-control is an HTTP header used to specify browser caching policies in both client requests and server responses. Policies include how a resource is cached, where it’s cached and its maximum age before expiring (i.e., time to live).
+The Cache-Control HTTP header field holds directives (instructions) in both requests and responses that control caching in browsers and shared caches (e.g. Proxies, CDNs).
+
+9.What is polling?
+
+	Polling is a technique for making requests in a non-blocking manner. It is particularly useful for applications that need to make requests to services which take a long time to process the request.
+Let's say we have a client and a server. If the client makes a synchronous request, its thread will block until the server responds. For a long process at the server, this can be problematic. In a real-world application accessed by lots of users, this would lead to reduced ability of the application to serve new requests.
+
+
+10.What is long polling?
+
+	HTTP Long Polling is a technique used to push information to a client as soon as possible on the server. As a result, the server does not have to wait for the client to send a request.
+In Long Polling, the server does not close the connection once it receives a request from the client. Instead, the server responds only if any new message is available or if a timeout threshold is reached.
+Once the client receives a response, it immediately sends a new request to the server to have a new pending connection to send data to the client, and the operation is repeated. With this approach, the server emulates a Realtime Server Push feature.
+
+11.What are web sockets?
+	
+WebSocket is bidirectional, a full-duplex protocol that is used in the same scenario of client-server communication, unlike HTTP it starts from ws:// or wss://. It is a stateful protocol, which means the connection between client and server will keep alive until it is terminated by either party (client or server). After closing the connection by either of the client and server, the connection is terminated from both ends. 
+Let’s take an example of client-server communication. There is the client which is a web browser and a server. Whenever we initiate the connection between client and server, the client-server makes the handshake and decides to create a new connection and this connection will keep alive until terminated by any of them. When the connection is established and alive the communication takes place using the same connection channel until it is terminated. 
+This is how after client-server handshaking, the client-server decides on a new connection to keep it alive, this new connection will be known as WebSocket. Once the communication link establishment and the connection are opened, message exchange will take place in bidirectional mode until connection persists between client-server. If any of them (client-server) dies or decides to close the connection is closed by both parties. The way in which socket works is slightly different from how HTTP works, the status code 101 denotes the switching protocol in WebSocket. 
+
+12.How is web sockets different from HTTP?
+
+WebSocket is a protocol providing full-duplex communication channels over a single TCP connection. Where as, HTTP providing half-duplex communication.
+Information exchange mode of WebSocket is bidirectional. Means, server can push information to the client (which does not allow direct HTTP).
+The contents of each stream are HTTP requests and responses, just encoded and packed up differently. Where as, WebSocket adds a number of features to manage the streams, but leaves old semantics untouched.
+If an encrypted WebSocket connection is used, then the use of Transport Layer Security (TLS) in the WebSocket Secure connection ensures that an HTTP CONNECT command is issued when the browser is configured to use an explicit proxy server. This sets up a tunnel, which provides low-level end-to-end TCP communication through the HTTP proxy, between the WebSocket Secure client and the WebSocket server.
+
+13.What is HTTPS?
+
+Hypertext transfer protocol secure (HTTPS) is the secure version of HTTP, which is the primary protocol used to send data between a web browser and a website. HTTPS is encrypted in order to increase security of data transfer. This is particularly important when users transmit sensitive data, such as by logging into a bank account, email service, or health insurance provider.
+Any website, especially those that require login credentials, should use HTTPS. In modern web browsers such as Chrome, websites that do not use HTTPS are marked differently than those that are. Look for a green padlock in the URL bar to signify the webpage is secure. Web browsers take HTTPS seriously; Google Chrome and other browsers flag all non-HTTPS websites as not secure.
+14.What is Cross Origin Resource Sharing? ( CORS ) Why do we need it?
+	Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
+
+15.What does Access-Control-Allow-Origin header do?
+	The Access-Control-Allow-Origin header is included in the response from one website to a request originating from another website, and identifies the permitted origin of the request. A web browser compares the Access-Control-Allow-Origin with the requesting website's origin and permits access to the response if they match.
+
+16.What is clickjacking? How do you fix it?
+Clickjacking is an attack that tricks a user into clicking a webpage element which is invisible or disguised as another element. This can cause users to unwittingly download malware, visit malicious web pages, provide credentials or sensitive information, transfer money, or purchase products online.
+Typically, clickjacking is performed by displaying an invisible page or HTML element, inside an iframe, on top of the page the user sees. The user believes they are clicking the visible page but in fact they are clicking an invisible element in the additional page transposed on top of it.
+
+Defending against Clickjacking
+Sending the proper Content Security Policy (CSP) frame-ancestors directive response headers that instruct the browser to not allow framing from other domains. The older X-Frame-Options HTTP headers is used for graceful degradation and older browser compatibility.
+Properly setting authentication cookies with SameSite=Strict (or Lax), unless they explicitly need None (which is rare).
+Employing defensive code in the UI to ensure that the current frame is the most top level window.
+
+17.What are some performance metrics for your website?
+
+Time to title:-The amount of time between the instant a visitor requests your website and the moment your site's title shows up in their browser tab is called the time to title. Seeing a title right away lets the user know that your website is legitimate, which makes them more likely to wait for the page to finish loading. Time to title is determined by the speed of delivery from your origin server to the user's browser. As shown in the results below, the time to title for our test site was 464 ms.
+Time to start rende:-The time elapsed between a user's request and the moment when content appears in their browser is called time to start render. This is also a very important metric to analyze as the sooner a visitor sees content appear, the more likely they will be to stay for the rest of the page to load. The time to start render, in this case, was 1019 ms.
+Time to interact:- The time between a request and the moment when a user can click on links, type in text fields or scroll the page is called time to interact. Some elements such as scripts and trackers may continue to load during this period.
+DNS lookup time:- The amount of time it takes for your DNS provider to translate a domain name into an IP address. Services such as Pingdom or WebPageTest can quickly calculate your website's DNS lookup times for each domain it must lookup.Visit our article to learn more about how to reduce DNS lookups. Additionally, check out our list of best free DNS providers for more information regarding what's available in terms of DNS services.
+Connection time:- The time between a request and when a connection is established between the user's browser and your origin server is called the connection time.
+Identifying challenges to connection time can be difficult because it depends on many factors. Too much server traffic, whether it be from users or bots, can cause connection times to spike. Users in different geographic regions are likely to experience longer connection times. Simply monitoring your website performance metrics over time may not give you enough information to address problems; you can experiment with load testing tools such as LoadStorm or JMeter to simulate heavy server usage. To ensure better connection time, you may need to upgrade your infrastructure. Alternatively, you could offload some assets onto a CDN or caching server.
+Time to first byte:- The time it takes for the very first byte of information to reach a user's browser after a connection to the server has been established is called time to first byte or TTFB. The order in which users receive information is important, and some slight alterations in your code can boost this website performance metric.Static content that appears the same to all users should be separated from dynamic content that is specific to the individual visitor. This way, users will receive your content right away while waiting for slower personalized content to load. Rigorous metric monitoring and load testing can help developers identify time to first byte issues. You can also use the KeyCDN's Performance Test tool to view the TTFB of a domain, or single asset, from 10 different locations.
+Time to last byte:- When the user's browser finally receives each and every byte of your website, the last byte time is recorded. The quality of your code and database queries play a big role in this metric. Other factors that may be affecting your TTLB include a misconfigured web server, or if the origin server has reached its capacity.
+Content complexity and website performance metrics
+Keeping track of website performance metrics involving time isn't very useful if you don't understand all of the other factors at play. Information about your website's content complexity can help you find ways to improve all of the previously discussed metrics.
+Overall weight:-The total number of bytes the user receives is referred to as the overall weight of your website. More important than the overall weight is the relationship between each asset since one heavy asset can slow down everything else. Furthermore, the growth of web page size has continued to expand year after year, therefore it's important to sometimes step back and see which assets are truly necessary.
+By separating individual metrics such as JavaScript weight, CSS weight, image weight and total asset weight, you can pick out which categories are too heavy, and then you can perform a waterfall analysis to identify the asset that needs to be altered or removed.
+Overall asset count:-The number of assets you have obviously affects your website's overall weight, but it's important to differentiate between asset count and weight. Every asset, no matter how small or compressed, has the potential to add more time to the loading process. Your overall asset count includes your total JavaScript, CSS and image counts.
+Third party domains:- The majority of your website's content is hosted on your domain, but many sites also include third party content such as embedded videos or social media widgets. Because these items originate from other domains, you have limited control over their functionality. Therefore, the potential for problems rises with each domain that's in play. Only rely on other domains that can guarantee impeccable performance, or else a third party could compromise your users' experience.
+User behavior and website performance metrics.
+ 
+18.What does the following term mean?
+Time to first byte:-Time to First Byte (TTFB) refers to the time between the browser requesting a page and when it receives the first byte of information from the server. This time includes DNS lookup and establishing the connection using a TCP handshake and SSL handshake if the request is made over https.
+Page load time:-page load time is the average amount of time it takes for a page to show up on your screen. It's calculated from initiation (when you click on a page link or type in a Web address) to completion (when the page is fully loaded in the browser).
+
+19.What do CDN or Content Delivery Networks do? When do you need a CDN?
+A content delivery network (CDN) refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content.
+A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages, javascript files, stylesheets, images, and videos. The popularity of CDN services continues to grow, and today the majority of web traffic is served through CDNs, including traffic from major sites like Facebook, Netflix, and Amazon.
+Speed – A CDN helps improve the page load time of your site and makes it faster.
+Crash Resistance – Using a CDN allows you to distribute the load to multiple servers instead of having 100% traffic to our main server, thus making it less likely to crash.
+Improved User Experience – With a CDN making your website faster, you’ll notice a decline in bounce rate on your site. It also increases the number of pages viewed by each user. Clearly, a fast site means improved user experience.
+Improvement in SEO – Google has stated that faster sites tend to rank higher in search engines. A CDN can boost your WordPress SEO and help you achieve higher keyword rankings.
+20.What is the difference between Client Side Renderring and Server Side Renderring?
+
+	server-side rendering (SSR)
+Server-side rendering or SSR is the conventional way of rendering web pages on the browser. As discussed above, the traditional way of rendering dynamic web content follows the below steps:
+The user sends a request to a website (usually via a browser)
+The server checks the resource, compiles and prepares the HTML content after traversing through server-side scripts lying within the page.
+This compiled HTML is sent to the client’s browser for further rendering and display.
+The browser downloads the HTML and makes the site visible to the end-user
+The browser then downloads the Javascript (JS) and as it executes the JS, it makes the page interactive
+
+In this process, all the burden of getting the dynamic content, converting it to HTML, and sending it to the browser remains on the server. Hence, this process is called server-side rendering (SSR).
+This responsibility of rendering the complete HTML in advance comes with a burden on memory and processing power on the Server. Hence, server-side rendering increases the page load time compared to the page load time for a static site where there is no dynamic content to render.
+
+client-side rendering (CSR)
+Client-side rendering or CSR is a different approach to how the web page is processed for display on the browser. In the CSR, the burden of compiling dynamic content and generate HTML for them is transferred to the client browser.
+This approach is powered with JavaScript frameworks and libraries like ReactJS, VueJS, and Angular. The normal flow of web page rendering for a client-side rendering scenario follows the below steps:
+The user sends a request to a website (usually via a browser)
+Instead of a Server, a CDN (Content Delivery Network) can be used to serve static HTML, CSS and supporting files to the user
+The browser downloads the HTML and then the JS, meanwhile the user sees a loading symbol
+After the browser fetches the JS, it makes API requests via AJAX to fetch the dynamic content and processes it to render the final content
+After the server responds, the final content is rendered using DOM processing on the client browser
+
+Since this process involves fetching and processing data on the client front, the process is called client-side rendering.
+
+
+21.What is Progressive Renderring
+Progressive Rendering is the technique of sequentially rendering portions of a webpage in the server and streaming it to the client in parts without waiting for the whole page to rendered.
+
+22.What is the difference between Preloading and Prefetching resources
+
+Preload is an early fetch instruction to the browser to request a resource needed for a page (key scripts, Web Fonts, hero images).
+Prefetch serves a slightly different use case — a future navigation by the user (e.g between views or pages) where fetched resources and requests need to persist across navigations.
+
+23.What are service workers?
+A service worker is a type of web worker. It's essentially a JavaScript file that runs separately from the main browser thread, intercepting network requests, caching or retrieving resources from the cache, and delivering push messages.
+
+24.What is !important
+It overrides the cascade and gives the style rule the highest precedence.
+p {
+    color: red !important;
+}
+#thing {
+    color: green;
+}
+<p id="thing">Will be RED.</p>
+
+24.What is the box model?
+The term "box model" is used when talking about design and layout. The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+
+25.What is the difference between position absolute, relative and fixed?
+relative - The element's position is adjusted relative to itself, without changing layout (and thus leaving a gap for the element where it would have been had it not been positioned).
+absolute - The element is removed from the flow of the page and positioned at a specified position relative to its closest positioned ancestor if any, or otherwise relative to the initial containing block. Absolutely positioned boxes can have margins, and they do not collapse with any other margins. These elements do not affect the position of other elements.
+fixed - The element is removed from the flow of the page and positioned at a specified position relative to the viewport and doesn't move when scrolled.
+
+26. What is CSS positioning?
+Keyword
+Value
+Description
+position
+static
+The default mode, block element is positioned in the flow. Top, left etc. are ignored.
+position
+relative
+The block element is positioned relative to its position in the flow.
+position
+absolute
+Block element is positioned relative to its container.
+position
+fixed
+Block element is positioned relative to the window and won’t scroll.
+top
+Number [px, cm, in…]
+Positions the block down from the reference point at the specified distance.
+bottom
+Number [px, cm, in…]
+Positions the block up from the reference point at the specified distance.
+left
+Number [px, cm, in…]
+Positions the block right from the reference point at the specified distance.
+right
+Number [px, cm, in…]
+Positions the block left from the reference point at the specified distance.
+
+
+27.the difference between display none and display hidden
+=>	display:none means that the tag in question will not appear on the page at all (although you can still interact with it through the dom). There will be no space allocated for it between the other tags.
+visibility:hidden means that unlike display:none, the tag is not visible, but space is allocated for it on the page. The tag is rendered, it just isn't seen on the page.
+
+ 28.Difference between flex and grid? Where to use it?
+=> CSS Grid Layout is a two-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a one-dimensional system (either in a column or a row).
+A core difference between CSS Grid and Flexbox is that — CSS Grid’s approach is layout-first while Flexbox’ approach is content-first. If you are well aware of your content before making layout, then blindly opt for Flexbox and if not, opt for CSS Grid.
+
+Flexbox layout is most appropriate to the components of an application (as most of them are fundamentally linear), and small-scale layouts, while the Grid layout is intended for larger-scale layouts which aren’t linear in their design.If you only need to define a layout as a row or a column, then you probably need flexbox. If you want to define a grid and fit content into it in two dimensions — you need the grid.
+
+29.What is BEM?
+BEM (Block Element Modifier) methodology recommends that everything has a single class, and, where you need hierarchy, that gets baked into the name of the class as well, this naturally makes the selector efficient and easy to override.
+
+30.Describe z-index and how stacking context is formed.
+The z-index property in CSS controls the vertical stacking order of elements that overlap. z-index only affects elements that have a position value which is not static.
+
+Without any z-index value, elements stack in the order that they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Elements with non-static positioning (and their children) will always appear on top of elements with default static positioning, regardless of HTML hierarchy.
+
+A stacking context is an element that contains a set of layers. Within a local stacking context, the z-index values of its children are set relative to that element rather than to the document root. Layers outside of that context — i.e. sibling elements of a local stacking context — can't sit between layers within it. If an element B sits on top of element A, a child element of element A, element C, can never be higher than element B even if element C has a higher z-index than element B.
+
+Each stacking context is self-contained - after the element's contents are stacked, the whole element is considered in the stacking order of the parent stacking context. A handful of CSS properties trigger a new stacking context, such as opacity less than 1, filter that is not None, and transform that is not none.
+
