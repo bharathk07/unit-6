@@ -1,0 +1,31 @@
+video link:-https://drive.google.com/file/d/1RMbZbrf5B5ENtLyUQGw9bmrrSyPAGW1S/view?usp=sharing
+
+1.What are some new things happening on the web? 
+
+=>	Every day technology changes day by day and every time it comes with new innovation which makes our life easier, simpler and faster. The new things happening on the web which I like the most are PWA (Progressive web apps) and SPA (Single page application). 
+PWA is the technology that gained modern developers' and investors’ attention due to its potential to perform a high-quality user experience close to a native app one. In 2019, 65% of online shopping orders through the website were made with mobile devices. PWA’s rising website trend makes it possible for users to view their favorite websites on a mobile web browser or desktop and without downloading special apps or computer programs. PWAs in 2021 will be written with HTML and CSS, JavaScript, React, or Angular. Besides great user experience and no need for programs, PWA could send push notifications and provide users with offline access to cached content. 
+SPA : Nowadays, with high-speed Internet standards, there is no need to be stuck on an approach where every action made on the page like clicks on various buttons leads to one more web page downloaded from a server. Single page application (or SPA) is one of the new website trends that helps us avoid seamless communication with the server and show better page performance and provide a high data protection level.  
+ 
+ 2. Explain a project that you have built? 
+
+=>	At Masai, I have worked on 3 projects. The latest project I have worked on is the clone of Mamaearth. This website was build within 6 days with a team of 5.  The tech stack we have used is css javascript react mongodb express node and material ui . My role and responsibility were I was the team lead and I have assigned the task . My responsibilities were to work on product page and add the sorting and filtering functionalities. I have also worked on complete Backend of the project where i have  provided google oauth and used nodemailer to send mails. 
+ 
+ 3. Whats something exciting that you have built? 
+=>	The most exciting thing which i feel that i have build is the Mamaearth website which was SPA ( Single Page Application ). This website was build within 6 days with a team of 5.  The tech stack we have used is css javascript react mongodb express node and material ui . My role and responsibilty were I was the team lead and I have assigned the task . My responsibilities were to work on product page and add the sorting and filtering functionalities. I have also worked on complete Backend of the project where i have  provided google oauth and used nodemailer to send mails 
+ 
+  4. What are you most excited about? 
+
+=>	If its about technologies , them I am mot excited about the PWA ( Progressive web Application ) . PWA is the technology that gained modern developers' and investors’ attention due to its potential to perform a high-quality user experience close to a native app one. In 2019, 65% of online shopping orders through the website were made with mobile devices. PWA’s rising website trend makes it possible for users to view their favorite websites on a mobile web browser or desktop and without downloading special apps or computer programs. PWAs in 2021 will be written with HTML and CSS, JavaScript, React, or Angular. Besides great user experience and no need for programs, PWA could send push notifications and provide users with offline access to cached content 
+ 
+5. Why do coding standards matter? What are some patterns you follow? 
+
+=>	A coding standard gives a uniform appearance to the codes written by different engineers. It improves readability, and maintainability of the code and it reduces complexity also. It helps in code reuse and helps to detect error easily. It promotes sound programming practices and increases efficiency of the programmers. The patterns i follow are :Limited use of global Naming conventions for local variables, global variables, constants and functions Indentation Principle of DRY Grouping Code i e writing the small block of code for a small operation instead of writing a huge single function. 
+ 
+6. How do you go about managing responsive websites? 
+
+=>	Get to know media query.[Text Wrapping Break] Use a predesigned theme or layout to save time[Text Wrapping Break] Set appropriate responsive break point ie for screen of 360 * 720 we can set required   layout and other css properties. Responsive typography for the whole website text Test Responsiveness of each component. 
+
+7. What do you care about the most when you write software? 
+
+=>	Use 	meaningful names   -  Single responsibility principle i e. make use of classes function to organize the code and it should be small and do only one thing. This will allow us to maintain readable and reusable code.Make necessary comments- Maintain proper indentation - Avoid writing long codes 
+
