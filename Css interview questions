@@ -1,0 +1,101 @@
+1.how to add comments on css?
+It is a common practice to add comments in the code to enhance readability and add helpful notes alongside the code. Like most languages, CSS allows the users to add comments in the stylesheet.
+Comments in CSS can be added by using the /* tag, which is then closed off by using */.
+
+2.Why do we use pseudo-class?
+A Pseudo class in CSS is used to define the special state of an element. It can be combined with a CSS selector to add an effect to existing elements based on their states. For Example, changing the style of an element when the user hovers over it, or when a link is visited. All of these can be done using Pseudo Classes in CSS.
+
+3.How is specificity applied?
+Specificity is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of CSS selectors.
+
+4.What method allows an element to be moved from its current position?
+The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).
+
+5.what properties does flex model have?
+The flex property is a shorthand property for:
+flex-grow
+flex-shrink
+flex-basis
+The flex property sets the flexible length on flexible items.
+
+6.What is the difference between flex and grids?
+1. Dimensionality and Flexibility:
+Flexbox offers greater control over alignment and space distribution between items. Being one-dimensional, Flexbox only deals with either columns or rows.
+Grid has two-dimension layout capabilities which allow flexible widths as a unit of length. This compensates for the limitations in Flex.
+2. Alignment:
+Flex Direction allows developers to align elements vertically or horizontally, which is used when developers create and reverse rows or columns.
+CSS Grid deploys fractional measure units for grid fluidity and auto-keyword functionality to automatically adjust columns or rows.
+3. Item Management
+Flex Container is the parent element while Flex Item represents the children. The Flex Container can ensure balanced representation by adjusting item dimensions. This allows developers to design for fluctuating screen sizes.Grid supports both implicit and explicit content placement. Its inbuilt automation allows it to automatically extend line items and copy values into the new creation from the preceding item.
+
+7.Give an example where we have to use grids and where you have to use flexbox?
+CSS grid is for layout, Flexbox is for alignment
+Back in that time when Flexbox was released, we thought that it could be the best layout system to use to build our web pages, but it wasn’t.
+Flexbox helped developers start to create more responsive and maintainable web applications, but the main idea of a one-dimensional layout system does not make sense when you need to build a more complex layout design.
+CSS grid really came to help us build more complex layout designs using a two-dimensional way, using both rows and columns. We should aim to use both of them together, but for different purposes. For your layout, use CSS grid, for alignment of your elements, use Flexbox.
+To master and know exactly when you’re going to need and how to use CSS grid, you should first learn the basics and how Flexbox works, because when you need alignment of elements in your application, it’s Flexbox that you’re going to use.
+
+8.Give an example where you cannot use flexbox, and you can only use grids?
+You have a small design to implement  —  Flexbox is ideal when you have a small layout design to implement, with a few rows or a few columns
+You need to align elements  —  Flexbox is perfect for that, the only thing we should do is create a flex container using display: flex and then define the flex-direction that we want
+You need a content-first design  — Flexbox is the ideal layout system to create web pages if you don’t know exactly how your content is going to look, so if you want everything just to fit in, Flexbox is perfect for that.
+Of course, you can build your whole application using only Flexbox and get the same result as if you were building with CSS grid, that’s totally fine. But for a better CSS approach, to have a more concise, well-written, and maintainable application in the long-term, to create and fit your layout perfectly, the ideal method is to use CSS grid.
+
+9.What are combinators? give examples of how you can use them
+A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+There are four different combinators in CSS:
+descendant selector (space):-The descendant selector matches all elements that are descendants of a specified element.
+child selector (>):-The child selector selects all elements that are the children of a specified element.
+adjacent sibling selector (+):-The adjacent sibling selector is used to select an element that is directly after another specific element.Sibling elements must have the same parent element, and "adjacent" means "immediately following".
+general sibling selector (~):-The general sibling selector selects all elements that are next siblings of a specified element.
+
+10.What does object-fit do?
+The object-fit CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container.
+You can alter the alignment of the replaced element's content object within the element's box using the object-position property.
+
+11.What does rotate do?
+The rotate() CSS function defines a transformation that rotates an element around a fixed point on the 2D plane, without deforming it. Its result is a <transform-function> data type.
+The fixed point that the element rotates around — mentioned above — is also known as the transform origin. This defaults to the center of the element, but you can set your own custom transform origin using the transform-origin property.
+
+12.What rule can be used to define animations
+The @keyframes rule specifies the animation code.
+The animation is created by gradually changing from one set of CSS styles to another.
+During the animation, you can change the set of CSS styles many times.Specify when the style change will happen in percent, or with the keywords "from" and "to", which is the same as 0% and 100%. 0% is the beginning of the animation, 100% is when the animation is complete.
+
+13.When working with attribute selectors, how can you select elements which contain a particular attribute value?
+The [attribute|="value"] selector is used to select elements with the specified attribute, whose value can be exactly the specified value, or the specified value followed by a hyphen (-).
+
+14.What does @media do?
+The @media rule is used in media queries to apply different styles for different media types/devices.
+Media queries can be used to check many things, such as:
+width and height of the viewport
+width and height of the device
+orientation (is the tablet/phone in landscape or portrait mode?)
+resolution
+Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.
+You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).
+
+
+
+15.What can be used to override properties of an element
+To override the CSS properties of a class using another class, we can use the !important directive. In CSS, !important means “this is important”, and the property:value pair that has this directive is always applied even if the other element has higher specificity.
+
+16.How can you select every alternate elements in a list of elements using css?
+
+The :nth-child(n) selector matches every element that is the nth child of its parent.
+n can be a number, a keyword (odd or even), or a formula (like an + b).
+
+17.What is the ranking of selectors with respect to specificity
+Specificity determines, which CSS rule is applied by the browsers.Specificity is usually the reason why your CSS-rules don’t apply to some elements, although you think they should.
+Every selector has its place in the specificity hierarchy.If two selectors apply to the same element, the one with higher specificity wins.
+There are four distinct categories which define the specificity level of a given selector: inline styles, IDs, classes, attributes, and elements.
+
+18.how can we apply same styles to multiple selectors?
+When you group CSS selectors, you apply the same styles to several different elements without repeating the styles in your stylesheet. Instead of having two, three, or more CSS rules that do the same thing (set the color of something to red, for example), you use a single CSS rule that accomplishes the same thing.
+
+19.What are the differences between relative and absolute in CSS?
+
+Relative:-An element with position: relative; is positioned relative to its normal position.
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+Absolute:-An element with position: absolute; is positioned relative to the nearest positioned ancestor. However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.Absolute positioned elements are removed from the normal flow, and can overlap elements.
+
